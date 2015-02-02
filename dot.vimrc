@@ -13,9 +13,9 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/bundle/'))
-
+call neobundle#begin(expand('~/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#end()
 
 "オートコンプリート関連のプラグイン
 NeoBundle 'Shougo/vimproc', {
