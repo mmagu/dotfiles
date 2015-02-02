@@ -187,6 +187,8 @@ set browsedir=buffer
 set nocompatible
 "スワップファイル用のディレクトリ
 set directory=~/dotfiles/vimbackup
+" undo用のディレクトリ
+set undodir=~/dotfiles/vimbackup/undo
 "タブの代わりに空白文字を挿入する
 set expandtab
 "変更中のファイルでも、保存しないで他のファイルを表示
