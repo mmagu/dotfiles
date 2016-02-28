@@ -13,9 +13,8 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 "オートコンプリート関連のプラグイン
 NeoBundle 'Shougo/vimproc', {
@@ -53,13 +52,13 @@ NeoBundle 'thinca/vim-ref'
 NeoBundle 'thinca/vim-quickrun'
 
 " non github repos
-NeoBundle 'git://git.wincent.com/command-t.git'
+NeoBundle 'wincent/command-t'
 
 "テキストオブジェクト関連のプラグイン
 NeoBundle 'surround.vim' 
 
 " git plugin
-NeoBundle 'tpope/vim-fugitive'
+" NeoBundle 'tpope/vim-fugitive'
 " vim-railsの補助的に利用
 NeoBundle 'basyura/unite-rails'
 
@@ -91,6 +90,7 @@ NeoBundle 'evidens/vim-twig'
 NeoBundle 'taglist.vim'
 set tags=tags
 
+call neobundle#end()
 NeoBundleCheck
 
 "--------------------------------------------------------------"
@@ -316,7 +316,8 @@ augroup UjihisaRSpec
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
 
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
 " Gist.vim
 " ファイルタイプを自動で判別する
