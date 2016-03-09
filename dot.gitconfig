@@ -11,7 +11,7 @@
 [merge]
 	tool = p4merge
 [core]
-	excludesfile = /Users/maguchi/.gitignore_global
+	excludesfile = ~/.gitignore
 	editor = env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
